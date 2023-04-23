@@ -1,0 +1,359 @@
+:root
+{
+    --color1: #D65A31;
+    --color2: #222831;
+    --color3: #393E46;
+    --color4: #DDDDDD;
+    --color5: #c1c1c1;
+    --color6: #FFA559;
+    --color7: #ecf0f3;
+    --box-sh: 0px 0px 10px -5px #333;
+    --box-sh2: 0px 3px 5px -5px rgba(0, 0, 0, 0.5);
+}
+::-webkit-scrollbar
+{
+    display: none;
+}
+*
+{
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+html
+{
+    scroll-behavior: smooth;
+}
+body 
+{
+    font-family: 'Open Sans', sans-serif;
+    background-color: var(--color7);
+    display: flex;
+    justify-content: center;
+}
+a
+{
+    text-decoration: none;
+}
+ul
+{
+    list-style: none;
+}
+.conteaner
+{
+    width:auto;
+    height:auto;
+}
+.conteaner header
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 90px;
+    position: relative;
+}
+.conteaner header::before
+{
+    content: '';
+    background-color: var(--color6);
+    width: 180px;
+    height: 2px;
+    position: absolute;
+    bottom: -20px;
+    transform: translateX(-50%);
+    left: 50%;
+}
+.conteaner header::after
+{
+    content: '';
+    width: 12px;
+    height: 12px;
+    background-color: var(--color1);
+    position: absolute;
+    left: 50%;
+    bottom: -29px;
+    border: 4px var(--color7) solid;
+    border-radius: 50%;
+    transform: translateX(-50%);
+}
+@import url(https://fonts.googleapis.com/css?family=Montserrat);
+.name {
+    height: 100%;
+    width: 100%;
+    font-family: Arial;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    margin: 0;
+    padding: 0;
+}
+
+svg {
+    display: block;
+    font: 8.5em 'Montserrat';
+    width: 400px;
+    height: 100%;
+    margin-top: -20px;
+}
+
+.text-copy {
+    fill: none;
+    stroke: white;
+    stroke-dasharray: 6% 29%;
+    stroke-width: 5px;
+    stroke-dashoffset: 0%;
+    animation: stroke-offset 5.5s infinite linear;
+}
+
+.text-copy:nth-child(1) {
+    stroke: var(--color1);
+    animation-delay: -1;
+}
+
+.text-copy:nth-child(2) {
+    stroke: var(--color6);
+    animation-delay: -2s;
+}
+
+.text-copy:nth-child(3) {
+    stroke: var(--color5);
+    animation-delay: -3s;
+}
+
+.text-copy:nth-child(4) {
+    stroke: var(--color6);
+    animation-delay: -4s;
+}
+
+.text-copy:nth-child(5) {
+    stroke: var(--color1);
+    animation-delay: -5s;
+}
+
+@keyframes stroke-offset {
+    100% {
+        stroke-dashoffset: -35%;
+    }
+}
+/*===================================================================================*/
+
+.conteaner .top
+{
+    width: 100%;
+    height: 140px;
+    margin-top: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    border-radius: 16px;
+    box-shadow: 13px 13px 20px #cbced1,
+                -13px -13px 20px #fff;
+
+}
+.conteaner .top img 
+{
+    width: 80px;
+    height: 80px;
+    
+}
+.conteaner .top h2
+{
+    font-size: 18px;
+    color: var(--color1);
+
+}
+.conteaner .top p
+{
+    font-size: 14px;
+    color: var(--color3);
+    
+}
+
+
+/*===================================================================================*/
+
+.conteaner .list
+{
+    width: 380px;
+    display: flex;
+    margin-top: 50px;
+    overflow: scroll;
+}
+.conteaner .list div
+{
+    width: 50px;
+    height: 65px;
+    margin: 5px 10px;
+    border-radius: 6px;
+    box-shadow: 3px 3px 2px #cbced1,
+            -3px -3px 2px #eae9e9;
+}
+.conteaner .list img
+{
+    width: 30px;
+    height: 30px;
+    margin-right: 10px;
+    margin-top: 5px;
+    box-shadow: var(--box-sh);
+    border-radius: 50%;
+}
+.conteaner .list div p
+{
+    font-size: 10px;
+    text-align: center;
+    color: var(--color6);
+}
+
+
+/*===================================================================================*/
+
+.conteaner .home
+{
+    width: 100%;
+    height: auto;
+    display: grid;
+    grid-template-columns: auto auto ;
+    gap: 30px;
+    padding: 10px;
+}
+.conteaner .home .card1
+{
+    width: 135px;
+    height: 165px;
+    text-align: center;
+    margin: 30px 10px 0 10px;
+    box-shadow: 13px 13px 20px #cbced1,
+                -13px -13px 20px #fff;
+    border-radius: 12px;
+}
+.conteaner .home .card1 img
+{
+    width: auto;
+    height: 100px;
+    box-shadow: var(--box-sh);
+    border-radius: 50%;
+    margin-top: 5px;
+}
+.conteaner .home .card1 .titel1
+{
+    width: 100%;
+    font-size: 20px;
+    color: var(--color6);
+    box-shadow: var(--box-sh2);
+    padding: 3px;
+}
+.conteaner .home .card1 .titel2
+{
+    width: 100%;
+    font-size: 15px;
+    letter-spacing: 2px;
+    color: var(--color5);
+    padding: 3px;
+}
+
+/* ======================================================= */
+
+.conteaner .x1
+{
+    width: auto;
+    height: auto;
+    margin-right: 20px;
+}
+.conteaner .x1 .card
+{
+    width: 350px;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 50px;
+    box-shadow: 13px 13px 20px #cbced1,
+            -13px -13px 20px #fff;
+    border-radius: 16px;
+}
+.conteaner .x1 .card .icon1
+{
+    margin-right: -25px;
+}
+.conteaner .x1 .card .top1
+{
+    padding: 5px;
+    margin-top: 5px;
+}
+.conteaner .x1 .card img
+{
+    width: 100px;
+    margin-left: -10px;
+    border-radius: 50%;
+    box-shadow: var(--box-sh);
+}
+.conteaner .x1 .card .dwon1
+{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 5px;
+}
+/* ======================================================= */
+
+.conteaner .icon
+{
+    width: auto;
+    height: 50px;
+    margin-top: 50px;
+    margin-bottom: 10px;
+    box-shadow: var(--box-sh2);
+        padding-bottom: 60px;
+}
+.conteaner .icon ul
+{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+.conteaner .icon ul li
+{
+    width: 35px;
+    height: 35px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 5px 0 5px;
+    border-radius: 50%;
+    box-shadow: 13px 13px 20px #cbced1,
+                -13px -13px 20px #fff;
+}
+.conteaner .icon ul li a
+{
+    font-size: 20px;
+    color: var(--color5);
+}
+.conteaner .icon ul li a:hover
+{
+    color: var(--color1);
+}
+
+/* ======================================================= */
+
+footer
+{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content:space-evenly;
+}
+.made p
+{
+    font-size: 12px;
+    padding:0 0 5px 0;
+    color: var(--color5);
+}
+.made span a
+{
+    color: var(--color6);
+}
